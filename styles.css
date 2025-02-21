@@ -1,25 +1,35 @@
 body {
     font-family: 'Pixelify Sans', sans-serif;
-    background-color: #FF8E00;<!-- change in future -->
+    background-color: #FFFFFF;/* change in future it is fugly */
     color: #000000;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1 {
-    color: #ff85a2;
+h1 { /* Which Jellycat Are You? */
+    color: #000000;
     font-weight: 700;
     font-size: 36px;
 }
 
-p {
+p { /* An adventure into Fuzzborough awaits! */
+    color: #ff5c8a;
     font-size: 24px;
     font-weight: bold;
+}
+
+.quiz-credits {
+    font-family: sans-serif;
     color: #ff5c8a;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Optional: Center-align text */
+    margin: 2px 0; /* Optional: Add space around the paragraph */
 }
 
 button {
+    font-family: 'Pixelify Sans', sans-serif;
     background-color: #00C2DE;
     color: #000000;
     border: none;
