@@ -1,35 +1,38 @@
+Hihi! Testing out some codes hehehe :'( cries with my design brain
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Which Jellycat are you?</title>
-     <link rel="icon" type="image/x-icon" href="IMG/icon.PNG">
-</head>
+    <title>Jellycat Plushsona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background-color: #ffeef8;
             color: #333;
             text-align: center;
             padding: 20px;
+            margin: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         button {
             background-color: #ff85a2;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 12px 24px;
+            border-radius: 25px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 16px;
         }
         button:hover {
             background-color: #ff5c8a;
@@ -37,31 +40,34 @@
         .hidden {
             display: none;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1> Jellycat Personality Test </h1>
+        <h1>✨ Which Jellycat Are You? ✨</h1>
         <div id="start">
-            <p>Jellycat persona</p>
-            <button onclick="startQuiz()">Start</button>
+            <img src="https://jellycat.com/cdn/shop/files/Amuseable_Sun_Huge_1.jpg" alt="Jellycat Start Image">
+            <p>Answer a few cute questions and discover which Jellycat plush matches your personality!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
         </div>
-
-
-        <br><br>
-        <p2>Personality quiz inspired by <a href="https://www.16personalities.com/free-personality-test">MBTI</a></p2>
-        <p2>This quiz is created for entertainment purposes!<br> Illustrated and coded by: <a href="https://www.instagram.com/chromaticreature/" target="_blank" style="font-size: 10px; ">@chromaticreature</a></p2>
-    </div>
 
         <div id="quiz" class="hidden">
             <div id="question"></div>
             <div id="options"></div>
+            <img id="questionImage" src="" alt="Quiz Image">
             <button onclick="nextQuestion()" id="nextBtn" class="hidden">Next</button>
         </div>
 
         <div id="result" class="hidden">
-            <h2>Your Jellycat Persona is...</h2>
+            <h2>Your Jellycat Match is...</h2>
             <p id="resultText"></p>
+            <img id="resultImage" src="" alt="Jellycat Result">
             <button onclick="restartQuiz()">Try Again</button>
         </div>
     </div>
@@ -70,18 +76,21 @@
         const questions = [
             {
                 question: "What's your ideal weekend activity?",
+                image: "https://jellycat.com/cdn/shop/files/Bartholomew_Bear_Lovey.jpg",
                 options: ["🌸 Relaxing with a book", "🎨 Crafting something cute", "🌿 Going for a nature walk", "🍰 Brunch with friends"],
-                scores: ["Dreamy Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
+                scores: ["Blossom Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
             },
             {
                 question: "Pick a snack to share:",
+                image: "https://jellycat.com/cdn/shop/files/Amuseable_Avocado.jpg",
                 options: ["🍫 Chocolate", "🍓 Strawberries", "🍿 Popcorn", "🍩 Donuts"],
-                scores: ["Sweet Kitten", "Dreamy Bunny", "Chill Sloth", "Social Butterfly"]
+                scores: ["Sweet Kitten", "Blossom Bunny", "Chill Sloth", "Social Butterfly"]
             },
             {
                 question: "What describes your style best?",
+                image: "https://jellycat.com/cdn/shop/files/Horticus_Hare.jpg",
                 options: ["🎀 Soft and pastel", "💫 Vintage and unique", "🖤 Minimal and clean", "🌸 Cute and colorful"],
-                scores: ["Dreamy Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
+                scores: ["Blossom Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
             }
         ];
 
@@ -97,6 +106,7 @@
         function showQuestion() {
             const q = questions[currentQuestion];
             document.getElementById('question').innerHTML = `<h3>${q.question}</h3>`;
+            document.getElementById('questionImage').src = q.image;
             const optionsDiv = document.getElementById('options');
             optionsDiv.innerHTML = '';
 
@@ -130,6 +140,15 @@
 
             const topScore = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
             document.getElementById('resultText').innerText = `You are a ${topScore}! 🌟`;
+
+            const images = {
+                "Blossom Bunny": "https://jellycat.com/cdn/shop/files/Blossom_Bunny.jpg",
+                "Creative Fox": "https://jellycat.com/cdn/shop/files/Clyde_Capybara.jpg",
+                "Chill Sloth": "https://jellycat.com/cdn/shop/files/Snoozling_Hedgehog.jpg",
+                "Social Butterfly": "https://jellycat.com/cdn/shop/files/Amuseable_Sun.jpg"
+            };
+
+            document.getElementById('resultImage').src = images[topScore];
         }
 
         function restartQuiz() {
