@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Personality Test</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffeef8;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff5c8a;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Cute Personality Test ✨</h1>
+        <div id="start">
+            <p>Answer a few cute questions and discover your adorable personality type!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
 
+        <div id="quiz" class="hidden">
+            <div id="question"></div>
+            <div id="options"></div>
+            <button onclick="nextQuestion()" id="nextBtn" class="hidden">Next</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <h2>Your Cute Persona is...</h2>
+            <p id="resultText"></p>
+            <button onclick="restartQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What's your ideal weekend activity?",
+                options: ["🌸 Relaxing with a book", "🎨 Crafting something cute", "🌿 Going for a nature walk", "🍰 Brunch with friends"],
+                scores: ["Dreamy Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
+            },
+            {
+                question: "Pick a snack to share:",
+                options: ["🍫 Chocolate", "🍓 Strawberries", "🍿 Popcorn", "🍩 Donuts"],
+                scores: ["Sweet Kitten", "Dreamy Bunny", "Chill Sloth", "Social Butterfly"]
+            },
+            {
+                question: "What describes your style best?",
+                options: ["🎀 Soft and pastel", "💫 Vintage and unique", "🖤 Minimal and clean", "🌸 Cute and colorful"],
+                scores: ["Dreamy Bunny", "Creative Fox", "Chill Sloth", "Social Butterfly"]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let scores = {};
+
+        function startQuiz() {
+            document.getElementById('start').classList.add('hidden');
+            document.getElementById('quiz').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question').innerHTML = `<h3>${q.question}</h3>`;
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+
+            q.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.innerText = option;
+                btn.onclick = () => selectOption(q.scores[index]);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function selectOption(score) {
+            scores[score] = (scores[score] || 0) + 1;
+            document.getElementById('nextBtn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            document.getElementById('nextBtn').classList.add('hidden');
+
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+
+            const topScore = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+            document.getElementById('resultText').innerText = `You are a ${topScore}! 🌟`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            scores = {};
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('start').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
