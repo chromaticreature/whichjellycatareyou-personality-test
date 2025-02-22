@@ -222,6 +222,7 @@ function showResult() {
                                <img src="${resultImage}" alt="Your personality image" class="result-image" />
                                <div class="result-buttons">
                                   <button id="share-btn">Share</button>
+                                  <button id="download-btn">Download</button>
                                   <button id="restart-btn">Restart</button>
                                </div>`;
   // Add event listener for the Restart button
@@ -239,7 +240,7 @@ function showResult() {
   document.getElementById("share-btn").addEventListener("click", function() {
     if (navigator.share) {
       navigator.share({
-        title: 'Check out my personality result!',
+        title: 'Check out my Jellycat Plushsona!',
         text: `I got ${personalityType} on the Jellycat Personality Quiz!`,
         url: window.location.href,
       })
@@ -249,5 +250,16 @@ function showResult() {
       // Fallback for browsers that don't support the Web Share API
       alert('Sharing is not supported in your browser. Copy the link: ' + window.location.href);
     }
+  });
+
+  // Add event listener for the Download button
+  document.getElementById("download-btn").addEventListener("click", function() {
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = resultImage;            // Set the href to the result image URL
+    link.download = 'Jellycat_Plushsona.png';  // Set the filename for download
+    document.body.appendChild(link);    // Append the link to the body
+    link.click();                       // Simulate a click to trigger the download
+    document.body.removeChild(link);    // Clean up by removing the link
   });
 }
