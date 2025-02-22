@@ -71,13 +71,13 @@ function startQuiz() {
 // Display Current Question
 function displayQuestion() {
     const quizElement = document.getElementById('quiz');
-    quizElement.innerHTML = "";  // Clear previous content to prevent overlap
+    quizElement.innerHTML = "";  // Clear previous content
 
     const question = questions[currentQuestion];
 
     if (question) {
         let html = `
-        <div class="container">
+        <div class="container active">
             <h2>${question.question}</h2>
             ${question.image ? `<img src="${question.image}" alt="Question ${currentQuestion + 1}" style="max-width:100%; border-radius:10px; margin:10px 0;">` : ""}
             <div class="answers">
@@ -139,8 +139,9 @@ function showResult() {
         resultTextContainer.innerHTML = "Oops! Something went wrong. Please try again.";
     }
 
+    // Hide quiz and show result
     document.getElementById('quiz').style.display = 'none';
-    resultElement.style.display = 'block';
+    resultElement.classList.add('active');
     document.getElementById('restart-button').style.display = 'block';
 }
 
