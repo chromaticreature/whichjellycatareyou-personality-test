@@ -219,5 +219,37 @@ function showResult() {
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
    resultContainer.innerHTML = `<h2>Your Jellycat Plushsona is:</h2>
-                               <img src="${resultImage}" alt="Your personality image" class="result-image" />`;
+                               <img src="${resultImage}" alt="Your personality image" class="result-image" />
+                                <div class="result-buttons">
+                                <button id="share-btn">Share</button>
+                                <button id="restart-btn">Restart</button>
+                                </div>
+  `;
+  // Add event listener for the Restart button
+  document.getElementById("restart-btn").addEventListener("click", function() {
+    // Optionally, reset scores and the question index if restarting
+    currentQuestionIndex = 0;
+    scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    
+    // Hide the result container and show the landing page container
+    resultContainer.style.display = "none";
+    document.getElementById("start").style.display = "block";
+  });
+  
+  // Add event listener for the Share button
+  document.getElementById("share-btn").addEventListener("click", function() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Check out my personality result!',
+        text: `I got ${personalityType} on the Jellycat Personality Quiz!`,
+        url: window.location.href,
+      })
+      .then(() => console.log('Shared successfully'))
+      .catch((error) => console.log('Error sharing:', error));
+    } else {
+      // Fallback for browsers that don't support the Web Share API
+      alert('Sharing is not supported in your browser. Copy the link: ' + window.location.href);
+    }
+  });
+}
 }
