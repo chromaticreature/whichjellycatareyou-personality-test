@@ -37,7 +37,7 @@ text-align: center; /* Optional: Center-align text */
 margin: 10px 0; /* Optional: Add space around the paragraph */
 }
 
-footer-wording {
+.footer-wording {
 color: #000000;
 font-size: 10px;
 font-weight: bold;
