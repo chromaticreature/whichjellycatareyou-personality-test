@@ -153,12 +153,12 @@ function showQuestion() {
   questionElement.innerText = currentQuestion.question;
   quizContainer.appendChild(questionElement);
 
-  // If there is an image for the question, display it
   if (currentQuestion.image) {
-    const imageElement = document.createElement("img");
-    imageElement.src = currentQuestion.image;
-    imageElement.alt = "Quiz Image";
-    quizContainer.appendChild(imageElement);
+  const imageElement = document.createElement("img");
+  imageElement.src = currentQuestion.image;
+  imageElement.alt = "Quiz Image";
+  imageElement.classList.add("quiz-image");
+  quizContainer.appendChild(imageElement);
   }
 
   // Create a container for the answer buttons
