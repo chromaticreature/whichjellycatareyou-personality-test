@@ -10,41 +10,50 @@ let scores = {
   P: 0
 };
 
+// Function to play the sound effect
+function playSound() {
+  const sound = new Audio("Audio/audioforjc.mp4");
+  sound.play();
+}
+
 const questions = [
   {
     question: "Q1/10: You approach Juniper Grove, where you have heard magical creatures live. Curious, you...",
     image: "images/1.gif",
     answers: [
-        { type: "T", text: "Strategically observe from a distance, analysing the best way to approach.", scores: { T: 1, F: 0, J: 0, P: 0 } },
-        { type: "F", text: "Gently call out, hoping to make a friendly connection with the creatures.", scores: { T: 0, F: 1, J: 0, P: 0 } },
-        { type: "J", text: "Carefully plan your approach to not disrupt the grove’s harmony.", scores: { T: 0, F: 0, J: 1, P: 0 } },
-        { type: "P", text: "Excitedly wander in without a plan, ready to embrace whatever happens.", scores: { T: 0, F: 0, J: 0, P: 1 } }
-        ]
-},
-{
+      { type: "T", text: "Strategically observe from a distance, analysing the best way to approach.", scores: { T: 1, F: 0, J: 0, P: 0 } },
+      { type: "F", text: "Gently call out, hoping to make a friendly connection with the creatures.", scores: { T: 0, F: 1, J: 0, P: 0 } },
+      { type: "J", text: "Carefully plan your approach to not disrupt the grove’s harmony.", scores: { T: 0, F: 0, J: 1, P: 0 } },
+      { type: "P", text: "Excitedly wander in without a plan, ready to embrace whatever happens.", scores: { T: 0, F: 0, J: 0, P: 1 } }
+    ]
+  },
+  {
     question: "Q2/10: You wander aimlessly around the woods till you hit a crossroad. Which path do you choose?",
     image: "images/2.gif",
     answers: [
-        { type: "T", text: "The path in front of you. It looks frequently travelled, while the others seem untouched.", scores: { T: 1, F: 0, J: 0, P: 0 } },
-        { type: "F", text: "The path on the left. You hear a soft hum and your heart is guided by the warmth of life.", scores: { T: 0, F: 1, J: 0, P: 0 } },
-        { type: "J", text: "The path on the right. You feel it is the perfect spot for a break after spotting cute flowers along the path.", scores: { T: 0, F: 0, J: 1, P: 0 } },            
-        { type: "P", text: "Nah... this ain't worth it. You head back the way you came.", scores: { T: 0, F: 0, J: 0, P: 1 } }
-        ]
-},
-{
+      { type: "T", text: "The path in front of you. It looks frequently travelled, while the others seem untouched.", scores: { T: 1, F: 0, J: 0, P: 0 } },
+      { type: "F", text: "The path on the left. You hear a soft hum and your heart is guided by the warmth of life.", scores: { T: 0, F: 1, J: 0, P: 0 } },
+      { type: "J", text: "The path on the right. You feel it is the perfect spot for a break after spotting cute flowers along the path.", scores: { T: 0, F: 0, J: 1, P: 0 } },            
+      { type: "P", text: "Nah... this ain't worth it. You head back the way you came.", scores: { T: 0, F: 0, J: 0, P: 1 } }
+    ]
+  },
+  {
     question: "Q3/10: You get lost in the woods, frustration creeping in, when a very cute squirrel suddenly scurries into your path. Its tiny eyes glimmer with curiosity. You…",
     image: "images/3.gif",
     answers: [
-        { type: "E", text: "Crouch down and excitedly start talking to the squirrel. It’s not like you’ve seen anyone else for hours, and even a furry friend counts as company.", scores: { E: 1, S: 0, I: 0, N: 0 } },
-        { type: "S", text: "Dig into your pocket and find some trail mix. You carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { E: 0, S: 1, I: 0, N: 0 } },
-        { type: "I", text: "Keep walking, pretending you didn’t see it. It’s just a squirrel, after all — best to stay focused on finding your way.", scores: { E: 0, S: 0, I: 1, N: 0 } },
-        { type: "N", text: "Narrow your eyes. A squirrel showing up right when you're lost? Tad bit sus...", scores: { E: 0, S: 0, I: 0, N: 1 } }
-        ]
-}
+      { type: "E", text: "Crouch down and excitedly start talking to the squirrel. It’s not like you’ve seen anyone else for hours, and even a furry friend counts as company.", scores: { E: 1, S: 0, I: 0, N: 0 } },
+      { type: "S", text: "Dig into your pocket and find some trail mix. You carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { E: 0, S: 1, I: 0, N: 0 } },
+      { type: "I", text: "Keep walking, pretending you didn’t see it. It’s just a squirrel, after all — best to stay focused on finding your way.", scores: { E: 0, S: 0, I: 1, N: 0 } },
+      { type: "N", text: "Narrow your eyes. A squirrel showing up right when you're lost? Tad bit sus...", scores: { E: 0, S: 0, I: 0, N: 1 } }
+    ]
+  }
 ];
 
 // Listen for the "Start adventure" button click (assumes your button is the first one on the page)
-document.querySelector("button").addEventListener("click", startQuiz);
+document.querySelector("button").addEventListener("click", function() {
+  playSound();
+  startQuiz();
+});
 
 function startQuiz() {
   // Hide the landing page container (assumes it has an id="start")
@@ -92,6 +101,7 @@ function showQuestion() {
     const btn = document.createElement("button");
     btn.innerText = answer.text;
     btn.addEventListener("click", function() {
+      playSound();  // Play sound on answer click
       // Update the scores based on the selected answer's score object
       for (const key in answer.scores) {
         scores[key] += answer.scores[key];
