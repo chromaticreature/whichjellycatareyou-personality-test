@@ -98,11 +98,11 @@ const questions = [
     ]
   },
   {
-    question: "Q11/12: With the relic safely returned, you stand with the grateful villagers. Their warm smiles and heartfelt thanks envelop you as you prepare to depart.",
+    question: "Q11/12: With the relic safely returned, the village elder leans in and reveals a wondrous secret: The relic bestows upon you an extraordinary gift to transform into a Jellycat villager at will",
     image: "ImagesFolder/placeholderart.png",
     answers: [
-      { type: "T", text: "Phew! Mission success! The relic is restored and everything is back in order. *Round of applause*", scores: { T: 1, F: 0 } },
-      { type: "F", text: "Tears stream down your face as you savour the deep connection that has given your journey its true meaning.", scores: { T: 0, F: 1 } }
+      { type: "T", text: "That's incredible! You're already looking forward to experiment with this ability and have fun with your new friends.", scores: { T: 1, F: 0 } },
+      { type: "F", text: "Your heart fills with delight at the thought of such playful magic and you imagine the joy it will bring", scores: { T: 0, F: 1 } }
     ]
   },
   {
