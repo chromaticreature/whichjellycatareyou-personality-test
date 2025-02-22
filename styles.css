@@ -20,7 +20,7 @@ text-align: center;
 
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 15px; /* More padding to prevent text from touching the screen edges */
+    padding: 30px; /* More padding to prevent text from touching the screen edges */
     margin: 10px;  /* Less margin if needed */
 }
 
