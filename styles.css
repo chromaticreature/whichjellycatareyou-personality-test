@@ -20,8 +20,9 @@ text-align: center;
 
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 30px; /* More padding to prevent text from touching the screen edges */
-    margin: 10px;  /* Less margin if needed */
+    padding: 50px; /* More padding to prevent text from touching the screen edges */
+    margin: 10px;
+    text-align: center;
 }
 
     h1 { /* Which Jellycat Are You? */
