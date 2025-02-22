@@ -49,8 +49,8 @@ text-align: center;
     }
 
     .quiz-image {
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 300px;
     display: inline-block;
     margin: 20px auto;
     }
