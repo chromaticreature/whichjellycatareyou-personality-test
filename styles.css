@@ -1,44 +1,52 @@
-/* Center the whole body content */
-body {
-    font-family: 'Pixelify Sans', sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Main quiz container */
+.quiz-container {
     text-align: center;
-}
-
-/* Center the main container */
-.container {
-    width: 100%;
+    margin: 20px auto;
     max-width: 800px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 20px;
-    margin: auto;
-    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure buttons fill width and are centered */
-.large-rectangular {
+/* Question heading */
+h2 {
+    color: #ff85a2;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Option buttons */
+.option-btn {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     background-color: #00C2DE;
-    color: #ffffff;
+    color: white;
     border: none;
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
-.large-rectangular:hover {
-    background-color: #00a5ba;
+.option-btn:hover {
+    background-color: #ff85a2;
+}
+
+/* Start and result buttons */
+.start-button, button {
+    padding: 10px 20px;
+    background-color: #ff5c8a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.start-button:hover, button:hover {
+    background-color: #ff2e6d;
 }
