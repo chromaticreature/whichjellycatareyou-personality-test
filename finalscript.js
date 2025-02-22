@@ -184,6 +184,25 @@ function showQuestion() {
   quizContainer.appendChild(answersContainer);
 }
 
+const personalityImages = {
+  "ESTJ": "ImagesFolder/placeholderart.png",
+  "ENTJ": "ImagesFolder/placeholderart.png",
+  "ENFP": "ImagesFolder/placeholderart.png",
+  "INFJ": "ImagesFolder/placeholderart.png",
+  "INTP": "ImagesFolder/placeholderart.png",
+  "INTJ": "ImagesFolder/placeholderart.png",
+  "INFP": "ImagesFolder/placeholderart.png",
+  "ENTP": "ImagesFolder/placeholderart.png",
+  "ENFJ": "ImagesFolder/placeholderart.png",
+  "ESFP": "ImagesFolder/placeholderart.png",
+  "ESTP": "ImagesFolder/placeholderart.png",
+  "ESFJ": "ImagesFolder/placeholderart.png",
+  "ISFJ": "ImagesFolder/placeholderart.png",
+  "ISFP": "ImagesFolder/placeholderart.png",
+  "ISTJ": "ImagesFolder/placeholderart.png",
+  "ISTP": "ImagesFolder/placeholderart.png",
+};
+
 function showResult() {
   // Calculate the final personality type by comparing the paired scores
   let personalityType = "";
@@ -196,5 +215,6 @@ function showResult() {
   document.getElementById("quiz-page").style.display = "none";
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
-  resultContainer.innerHTML = `<h2>Your personality type is: ${personalityType}</h2>`;
+  resultContainer.innerHTML = `<h2>Your personality type is:</h2>`;
+  resultContainer.innerHTML = `<img src="${resultImage}" alt="Your personality image" class="result-image" />`;
 }
