@@ -14,6 +14,7 @@ text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     border-radius: 20px;
+    text-align: center;
 }
 
     h1 { /* Which Jellycat Are You? */
@@ -40,7 +41,7 @@ text-align: center;
     .quiz-image {
     width: 300px;
     height: auto;
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     }
     
