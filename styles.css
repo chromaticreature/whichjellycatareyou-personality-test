@@ -88,21 +88,9 @@ background-color: #A9E4F1;
 
     @media only screen and (max-width: 600px) {
     .container {
+    width: 95%;
+    max-width: 95%;
     padding: 10px;
-    margin: 10px auto;
-    max-width: 50%;
-  }
-  
-  /* Optionally reduce base font sizes */
-  body {
-    font-size: 12px;
-  }
-  
-  h1 {
-    font-size: 18px;
-  }
-  
-  p {
-    font-size: 12px;
+    margin: 0 auto;
   }
 }
