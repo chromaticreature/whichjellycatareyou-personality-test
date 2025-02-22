@@ -218,6 +218,6 @@ function showResult() {
   document.getElementById("quiz-page").style.display = "none";
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
-   resultContainer.innerHTML = `<h2>Your personality type is:</h2>
+   resultContainer.innerHTML = `<h2>Your Jellycat Plushsona is:</h2>
                                <img src="${resultImage}" alt="Your personality image" class="result-image" />`;
 }
