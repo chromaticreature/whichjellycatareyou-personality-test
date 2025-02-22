@@ -25,16 +25,6 @@ const questions = [
             { type: "J", text: "The path on the right. You feel it is the perfect spot for a break after spotting cute flowers along the path.", scores: { T: 0, F: 0, J: 1, P: 0 } },
             { type: "P", text: "Nah... this ain't worth it. You head back the way you came.", scores: { T: 0, F: 0, J: 0, P: 1 } }
         ]
-    },
-    {
-        question: "Q3/10: You get lost in the woods, frustration creeping in, when a very cute squirrel suddenly scurries into your path. Its tiny eyes glimmer with curiosity. You…",
-        image: "images/3.gif",
-        answers: [
-            { type: "E", text: "Crouch down and excitedly start talking to the squirrel. It’s not like you’ve seen anyone else for hours, and even a furry friend counts as company.", scores: { E: 1, S: 0, I: 0, N: 0 } },
-            { type: "S", text: "Dig into your pocket and find some trail mix. You carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { E: 0, S: 1, I: 0, N: 0 } },
-            { type: "I", text: "Keep walking, pretending you didn’t see it. It’s just a squirrel, after all — best to stay focused on finding your way.", scores: { E: 0, S: 0, I: 1, N: 0 } },
-            { type: "N", text: "Narrow your eyes. A squirrel showing up right when you're lost? Tad bit sus...", scores: { E: 0, S: 0, I: 0, N: 1 } }
-        ]
     }
 ];
 
@@ -60,6 +50,7 @@ const resultOptions = {
 
 // Start the Quiz
 function startQuiz() {
+    document.getElementById('landing-header').style.display = 'none'; // Hide header during quiz
     document.getElementById('start').style.display = 'none';
     document.getElementById('quiz-page').style.display = 'block';
     currentQuestion = 0;
@@ -141,15 +132,11 @@ function showResult() {
 
 // Restart the Quiz
 function restartQuiz() {
-    currentQuestion = 0;
-    userAnswers = {};
+    document.getElementById('landing-header').style.display = 'block'; // Show header when restarting
     document.getElementById('result').style.display = 'none';
-    document.getElementById('quiz').style.display = 'block';
-    displayQuestion();
+    document.getElementById('quiz-page').style.display = 'none';
+    document.getElementById('start').style.display = 'block';
 }
 
 // Initialize the Quiz
-document.getElementById('start-button').addEventListener('click', startQuiz);
-document.getElementById('restart-button').addEventListener('click', restartQuiz);
-
 displayQuestion();
