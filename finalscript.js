@@ -71,13 +71,13 @@ function startQuiz() {
 // Display Current Question
 function displayQuestion() {
     const quizElement = document.getElementById('quiz');
-    quizElement.innerHTML = "";  // Clear previous content
+    quizElement.innerHTML = "";  // Clear previous content to prevent overlap
 
     const question = questions[currentQuestion];
 
     if (question) {
         let html = `
-        <div class="container active">
+        <div class="container">
             <h2>${question.question}</h2>
             ${question.image ? `<img src="${question.image}" alt="Question ${currentQuestion + 1}" style="max-width:100%; border-radius:10px; margin:10px 0;">` : ""}
             <div class="answers">
@@ -139,9 +139,8 @@ function showResult() {
         resultTextContainer.innerHTML = "Oops! Something went wrong. Please try again.";
     }
 
-    // Hide quiz and show result
     document.getElementById('quiz').style.display = 'none';
-    resultElement.classList.add('active');
+    resultElement.style.display = 'block';
     document.getElementById('restart-button').style.display = 'block';
 }
 
@@ -159,6 +158,5 @@ function restartQuiz() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quiz-page').style.display = 'none';
     document.getElementById('result').style.display = 'none';
-    document.getElementById('start').addEventListener('click', startQuiz);
-    document.getElementById('restart-button').addEventListener('click', restartQuiz);
+    displayQuestion();
 });
