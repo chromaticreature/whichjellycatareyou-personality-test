@@ -19,7 +19,7 @@ function playSound() {
 const questions = [
   {
     question: "Q1/12: You approach Juniper Grove, where you have heard magical creatures live. Curious, you...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q1.png",
     answers: [
       { type: "E", text: "Excitedly wander in while calling out to the creatures, hoping to make a friendly connection.", scores: { E: 1, I: 0 } },
       { type: "I", text: "Strategically observe from a distance, analysing the best way to approach the unfamiliar area.", scores: { E: 0, I: 1 } }
@@ -27,7 +27,7 @@ const questions = [
   },
   {
     question: "Q2/12: You wander around the woods till you encounter a fork in the road. Which path do you choose?",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q2.png",
     answers: [
       { type: "S", text: "The path on the left. You examine the physical details of the path and conclude it looks frequently travelled.", scores: { S: 1, N: 0 } },
       { type: "N", text: "The path on the right. You sense a hum of energy and imagine the adventures this path might lead to.", scores: { S: 0, N: 1 } }
