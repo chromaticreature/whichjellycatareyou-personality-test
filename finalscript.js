@@ -89,6 +89,30 @@ const questions = [
       { type: "I", text: "Hide behind a tree, listening intently to their murmurs and piecing together the clues on your own", scores: { E: 0, I: 1 } },
     ]
   },
+  {
+    question: "Q10/12: At last, you’ve discovered the lost relic. With the treasure safely in hand, you now begin your journey back to the village.",
+    image: "images/2.gif",
+    answers: [
+      { type: "S", text: "The unmistakable scent of pine is a reminder that your friends in the village eagerly await your return.", scores: { S: 1, N: 0 } },
+      { type: "N", text: "A soothing warmth radiates from the relic, as if it's saying that the villagers are missing you.", scores: { S: 0, N: 1 } },
+    ]
+  },
+  {
+    question: "Q11/12: With the relic safely returned, you stand with the grateful villagers. Their warm smiles and heartfelt thanks envelop you as you prepare to depart.",
+    image: "images/3.gif",
+    answers: [
+      { type: "T", text: "Phew! Mission success! The relic is restored and everything is back in order. *Round of applauce*", scores: { T: 1, F: 0 } },
+      { type: "F", text: "Tears stream down your face as you savour the deep connection that has given your journey its true meaning.", scores: { T: 0, F: 1 } },
+    ]
+  },
+  {
+    question: "Q12/12: As you retrace your steps back home, the memory of the villagers linger in your mind. A gentle question arises: Will you return to visit them again?",
+    image: "images/3.gif",
+    answers: [
+      { type: "J", text: "You make a promise that on the next full moon, you will journey back to the village.", scores: { J: 1, P: 0 } },
+      { type: "P", text: "You let fate decide your return, trusting that the winds of adventure will whisper your my ear.", scores: { J: 0, P: 1 } },
+    ]
+  },
 ];
 
 // Listen for the "Start adventure" button click (assumes your button is the first one on the page)
