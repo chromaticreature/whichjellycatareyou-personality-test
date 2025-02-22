@@ -115,6 +115,8 @@ const questions = [
   }
 ];
 
+console.log("Total questions loaded:", questions.length);
+
 // Listen for the "Start adventure" button click (assumes your button is the first one on the page)
 document.querySelector("button").addEventListener("click", function() {
   playSound();
