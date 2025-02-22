@@ -7,6 +7,15 @@ body {
     text-align: center;
 }
 
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-radius: 20px;
+}
+
 h1 { /* Which Jellycat Are You? */
     color: #00C2DE;
     font-weight: 700;
