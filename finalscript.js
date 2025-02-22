@@ -256,10 +256,10 @@ function showResult() {
   document.getElementById("download-btn").addEventListener("click", function() {
     // Create a temporary anchor element
     const link = document.createElement('a');
-    link.href = resultImage;            // Set the href to the result image URL
-    link.download = 'Jellycat_Plushsona.png';  // Set the filename for download
-    document.body.appendChild(link);    // Append the link to the body
-    link.click();                       // Simulate a click to trigger the download
-    document.body.removeChild(link);    // Clean up by removing the link
+    link.href = resultImage;            
+    link.download = 'YourJellycatPlushsona_Chromaticreature.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 }
