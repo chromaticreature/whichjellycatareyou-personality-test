@@ -34,7 +34,7 @@ const questions = [
       ]
   },
   {
-    question: "Q3/12: You get lost and frustration creeping in, when a very cute squirrel suddenly scurries into your path. Its tiny eyes glimmer with curiosity. You…",
+    question: "Q3/12: You get lost and frustration creeping in, when a very cute squirrel suddenly scurries into your path. Its tiny eyes glimmer with curiosity. You...",
     image: "images/3.gif",
     answers: [
       { type: "T", text: "Assess the situation. A squirrel showing up right when you're lost? Tad bit sus...", scores: { T: 1, F: 0 } },
@@ -42,11 +42,27 @@ const questions = [
       ]
   },
   {
-    question: "Q4/12: After following the helpful squirrel, you suddenly find yourself before a mysterious, glowing portal.",
+    question: "Q4/12: After following the helpful squirrel, you suddenly find yourself before a mysterious, glowing portal. You...",
     image: "images/3.gif",
     answers: [
-      { type: "J", text: "You take a moment to survey the portal. *What's on the other side?! What if there is something dangerous...*", scores: { J: 1, P: 0 } },
-      { type: "P", text: "You leap through the portal on impulse, excited to see what's in store. *Hopefully the magical creatures are there!*", scores: { J: 0, P: 1 } },
+      { type: "J", text: "Take a moment to survey the portal. *What's on the other side?! What if there is something dangerous...*", scores: { J: 1, P: 0 } },
+      { type: "P", text: "Leap through the portal on impulse, excited to see what's in store. *Hopefully the magical creatures are there!*", scores: { J: 0, P: 1 } },
+      ]
+  },
+  {
+    question: "Q5/12: Stepping through the magical portal, you find yourself in a quaint village filled with adorable little creatures. You...",
+    image: "images/1.gif",
+    answers: [
+      { type: "E", text: "Enthusiastically mingle with the villagers, excited to join in their festivities and share your journey.", scores: { E: 1, I: 0 } },
+      { type: "I", text: "Quietly absorb the village’s charm, preferring to observe the villagers before joining them.", scores: { E: 0, I: 1 } },
+      ]
+  },
+  {
+    question: "Q6/12: Around the campfire with the villagers, the warm glow inspires conversation and wonder. You find yourself focusing on...",
+    image: "images/2.gif",
+    answers: [
+      { type: "S", text: "The crackle of the fire, the scent of woodsmoke and the excitement of the villagers.", scores: { S: 1, N: 0 } },
+      { type: "N", text: "Their voices, letting your imagination wander through the magical tales they shared.", scores: { S: 0, N: 1 } },
       ]
   },
 ];
