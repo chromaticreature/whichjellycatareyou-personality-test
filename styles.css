@@ -95,14 +95,14 @@ background-color: #A9E4F1;
   
   /* Optionally reduce base font sizes */
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 18px;
   }
   
   p {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
