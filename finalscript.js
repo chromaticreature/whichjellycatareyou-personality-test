@@ -35,7 +35,7 @@ const questions = [
   },
   {
     question: "Q3/12: You get lost and frustration creeps in, when a very cute squirrel suddenly scurries into your path. Its tiny eyes glimmer with curiosity. You...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q3.png",
     answers: [
       { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? Tad bit sus...", scores: { T: 1, F: 0 } },
       { type: "F", text: "Carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { T: 0, F: 1 } }
@@ -43,7 +43,7 @@ const questions = [
   },
   {
     question: "Q4/12: After following the helpful squirrel, you suddenly find yourself before a mysterious, glowing portal. You...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q4.png",
     answers: [
       { type: "J", text: "Take a moment to survey the portal. *What's on the other side? What if there's something dangerous?*", scores: { J: 1, P: 0 } },
       { type: "P", text: "Leap through the portal on impulse, excited to see what's in store. *Hopefully the magical creatures are there!*", scores: { J: 0, P: 1 } }
@@ -51,7 +51,7 @@ const questions = [
   },
   {
     question: "Q5/12: Stepping through the magical portal, you find yourself in a quaint village filled with adorable little creatures. You...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q5.png",
     answers: [
       { type: "E", text: "Enthusiastically mingle with the villagers, excited to join in their festivities.", scores: { E: 1, I: 0 } },
       { type: "I", text: "Quietly absorb the village’s charm, preferring to observe before joining them.", scores: { E: 0, I: 1 } }
@@ -59,7 +59,7 @@ const questions = [
   },
   {
     question: "Q6/12: Around the campfire with the villagers, the warm glow inspires conversation and wonder. You find yourself focusing on...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q6.png",
     answers: [
       { type: "S", text: "The crackle of the fire, the scent of woodsmoke, and the excitement of the villagers.", scores: { S: 1, N: 0 } },
       { type: "N", text: "Their voices, letting your imagination wander through the magical tales they shared.", scores: { S: 0, N: 1 } }
@@ -67,7 +67,7 @@ const questions = [
   },
   {
     question: "Q7/12: The village elder confides with you that unless the enchanted relic is recovered, all the villagers will soon be transformed into soft, cuddly plushies. You...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q7.png",
     answers: [
       { type: "T", text: "Immediately start crafting a plan to recover the enchanted relic and rescue the villagers. *Chop chop curry pok*", scores: { T: 1, F: 0 } },
       { type: "F", text: "Feel sad at the thought of your friends turning into plushies, you decide to set off in the morning. *Who knows what lurks in these woods*", scores: { T: 0, F: 1 } }
@@ -75,7 +75,7 @@ const questions = [
   },
   {
     question: "Q8/12: You prepare to embark on your quest deeper into the mysterious woods",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q8.png",
     answers: [
       { type: "J", text: "Under the soft glow of twilight, you unfurl a treasure map ready to set forth on your carefully planned route.", scores: { J: 1, P: 0 } },
       { type: "P", text: "Brimming full of excitement, you embrace the unknown and allow each unexpected turn to guide your journey.", scores: { J: 0, P: 1 } }
@@ -83,7 +83,7 @@ const questions = [
   },
   {
     question: "Q9/12: You follow a trail of shimmering leaves that leads you to a secluded glen. Here, a small group of fairies huddles together, softly whispering secrets that hint at the lost relic’s hidden location. You...",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q9.png",
     answers: [
       { type: "E", text: "Join the circle, wanting to uncover every detail about the relic’s whereabouts.", scores: { E: 1, I: 0 } },
       { type: "I", text: "Hide behind a tree, listening intently to their murmurs and piecing together the clues on your own.", scores: { E: 0, I: 1 } }
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: "Q10/12: At last, you’ve discovered the lost relic. With the treasure safely in hand, you now begin your journey back to the village.",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q10.png",
     answers: [
       { type: "S", text: "The unmistakable scent of pine is a reminder that your friends in the village eagerly await your return.", scores: { S: 1, N: 0 } },
       { type: "N", text: "A soothing warmth radiates from the relic, as if it's saying that the villagers are missing you.", scores: { S: 0, N: 1 } }
@@ -99,7 +99,7 @@ const questions = [
   },
   {
     question: "Q11/12: With the relic safely returned, the village elder leans in and reveals a wondrous secret: The relic bestows upon you an extraordinary gift to transform into a Jellycat villager at will",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q11.png",
     answers: [
       { type: "T", text: "That's incredible! You're already looking forward to experiment with this ability and have fun with your new friends.", scores: { T: 1, F: 0 } },
       { type: "F", text: "Your heart fills with delight at the thought of such playful magic and you imagine the joy it will bring", scores: { T: 0, F: 1 } }
@@ -107,7 +107,7 @@ const questions = [
   },
   {
     question: "Q12/12: As you retrace your steps back home, the memory of the villagers lingers in your mind. A gentle question arises: Will you return to visit them again?",
-    image: "ImagesFolder/placeholderart.png",
+    image: "ImagesFolder/q12.png",
     answers: [
       { type: "J", text: "You make a promise that on the next full moon, you will journey back to the village.", scores: { J: 1, P: 0 } },
       { type: "P", text: "You let fate decide your return, trusting that the winds of adventure will whisper in your ear.", scores: { J: 0, P: 1 } }
