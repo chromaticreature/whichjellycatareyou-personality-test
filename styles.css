@@ -1,13 +1,18 @@
+/* Center the whole body content */
 body {
     font-family: 'Pixelify Sans', sans-serif;
-    background-color: #FFFFFF;/* change in future it is fugly */
+    background-color: #FFFFFF;
     color: #000000;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-/* Ensure containers stack vertically and don't overlap */
+/* Center the main container */
 .container {
     width: 100%;
     max-width: 800px;
@@ -15,51 +20,25 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin: auto;
+    text-align: center;
 }
 
-/* Ensure the quiz page takes full width and centers content */
-.quiz-page {
+/* Ensure buttons fill width and are centered */
+.large-rectangular {
+    display: block;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-h1 { /* Which Jellycat Are You? */
-    color: #00C2DE;
-    font-weight: 700;
-    font-size: 36px;
-}
-
-p { /* An adventure into Fuzzborough awaits! */
-    color: #000000;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.quiz-credits {
-    font-family: sans-serif;
-    color: #333;
-    font-size: 10px;
-    font-weight: normal;
-    text-align: center; /* Optional: Center-align text */
-    margin: 10px 0; /* Optional: Add space around the paragraph */
-}
-
-button {
-    font-family: 'Pixelify Sans', sans-serif;
-    background-color: #00C2DE;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 10px;
     margin: 10px 0;
+    background-color: #00C2DE;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #A9E4F1;
+.large-rectangular:hover {
+    background-color: #00a5ba;
 }
