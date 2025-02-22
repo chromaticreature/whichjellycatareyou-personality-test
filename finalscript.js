@@ -40,22 +40,22 @@ const questions = [
 
 // Personality Result Options
 const resultOptions = {
-    "ISTJ": { image: "1DE.png" },
-    "ISFJ": { image: "2light.png" },
-    "INFJ": { image: "3UFO.png" },
-    "INTJ": { image: "4nebula.png" },
-    "ISTP": { image: "5comet.png" },
-    "ISFP": { image: "6ST.png" },
-    "INFP": { image: "7DM.png" },
-    "INTP": { image: "8met.png" },
-    "ESTP": { image: "9BH.png" },
-    "ESFP": { image: "10Sn.png" },
-    "ENFP": { image: "11Grav.png" },
-    "ENTP": { image: "12hand.png" },
-    "ESTJ": { image: "13sat.png" },
-    "ESFJ": { image: "14sun.png" },
-    "ENFJ": { image: "15gal.png" },
-    "ENTJ": { image: "16rocket.png" }
+    "ISTJ": { image: "" },
+    "ISFJ": { image: "" },
+    "INFJ": { image: "" },
+    "INTJ": { image: "" },
+    "ISTP": { image: "" },
+    "ISFP": { image: "" },
+    "INFP": { image: "" },
+    "INTP": { image: "" },
+    "ESTP": { image: "" },
+    "ESFP": { image: "" },
+    "ENFP": { image: "" },
+    "ENTP": { image: "" },
+    "ESTJ": { image: "" },
+    "ESFJ": { image: "" },
+    "ENFJ": { image: "" },
+    "ENTJ": { image: "" }
 };
 
 // Start the Quiz
@@ -73,13 +73,18 @@ function displayQuestion() {
     const question = questions[currentQuestion];
 
     if (question) {
-        let html = `<h2>${question.question}</h2>`;
-        if (question.image) {
-            html += `<img src="${question.image}" alt="Question ${currentQuestion + 1}" style="max-width:400px; border-radius:10px; margin:10px 0;">`;
-        }
-        question.answers.forEach((answer, index) => {
-            html += `<button class="large-rectangular" onclick="handleAnswer(${index})">${answer.text}</button>`;
-        });
+        let html = `
+        <div class="container">
+            <h2>${question.question}</h2>
+            ${question.image ? `<img src="${question.image}" alt="Question ${currentQuestion + 1}" style="max-width:100%; border-radius:10px; margin:10px 0;">` : ""}
+            <div class="answers">
+                ${question.answers.map((answer, index) => `
+                    <button class="large-rectangular" onclick="handleAnswer(${index})">${answer.text}</button>
+                `).join("")}
+            </div>
+        </div>
+        `;
+
         quizElement.innerHTML = html;
     } else {
         showResult();
