@@ -158,5 +158,6 @@ function restartQuiz() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quiz-page').style.display = 'none';
     document.getElementById('result').style.display = 'none';
-    displayQuestion();
+    document.getElementById('start').addEventListener('click', startQuiz);
+    document.getElementById('restart-button').addEventListener('click', restartQuiz);
 });
