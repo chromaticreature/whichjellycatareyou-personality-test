@@ -16,12 +16,6 @@ body {
     background-color: #f9f9f9;
     border-radius: 20px;
     margin-bottom: 20px;
-    display: none; /* Hide all containers by default */
-}
-
-/* Show only the active container */
-.container.active {
-    display: block;
 }
 
 /* Ensure the quiz page takes full width and centers content */
