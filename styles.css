@@ -32,10 +32,19 @@ text-align: center;
     font-size: 36px;
     }
     
-    p { /* An adventure into Fuzzborough awaits! */
+    p { 
     color: #000000;
     font-size: 24px;
     font-weight: bold;
+    }
+
+    p.pixelify-sans-uniquifier { /* An adventure into Fuzzborough awaits! */
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    font-size: 24px;
     }
     
     .quiz-credits {
