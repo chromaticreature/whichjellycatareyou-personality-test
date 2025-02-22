@@ -154,11 +154,11 @@ function showQuestion() {
   quizContainer.appendChild(questionElement);
 
   if (currentQuestion.image) {
-  const imageElement = document.createElement("img");
-  imageElement.src = currentQuestion.image;
-  imageElement.alt = "Quiz Image";
-  imageElement.classList.add("quiz-image");
-  quizContainer.appendChild(imageElement);
+    const imageElement = document.createElement("img");
+    imageElement.src = currentQuestion.image;
+    imageElement.alt = "Quiz Image";
+    imageElement.classList.add("quiz-image");
+    quizContainer.appendChild(imageElement);
   }
 
   // Create a container for the answer buttons
@@ -218,19 +218,18 @@ function showResult() {
   document.getElementById("quiz-page").style.display = "none";
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
-   resultContainer.innerHTML = `<h2>Your Jellycat Plushsona is:</h2>
+  resultContainer.innerHTML = `<h2>Your Jellycat Plushsona is:</h2>
                                <img src="${resultImage}" alt="Your personality image" class="result-image" />
-                                <div class="result-buttons">
-                                <button id="share-btn">Share</button>
-                                <button id="restart-btn">Restart</button>
-                                </div>
-  `;
+                               <div class="result-buttons">
+                                  <button id="share-btn">Share</button>
+                                  <button id="restart-btn">Restart</button>
+                               </div>`;
   // Add event listener for the Restart button
   document.getElementById("restart-btn").addEventListener("click", function() {
     // Optionally, reset scores and the question index if restarting
     currentQuestionIndex = 0;
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-    
+
     // Hide the result container and show the landing page container
     resultContainer.style.display = "none";
     document.getElementById("start").style.display = "block";
@@ -251,5 +250,4 @@ function showResult() {
       alert('Sharing is not supported in your browser. Copy the link: ' + window.location.href);
     }
   });
-}
 }
