@@ -211,10 +211,13 @@ function showResult() {
   personalityType += scores.T >= scores.F ? "T" : "F";
   personalityType += scores.J >= scores.P ? "J" : "P";
 
+  // Get the corresponding image from the personalityImages mapping
+  const resultImage = personalityImages[personalityType] || "ImagesFolder/default.png";
+
   // Hide the quiz container and display the result
   document.getElementById("quiz-page").style.display = "none";
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
-  resultContainer.innerHTML = `<h2>Your personality type is:</h2>`;
-  resultContainer.innerHTML = `<img src="${resultImage}" alt="Your personality image" class="result-image" />`;
+   resultContainer.innerHTML = `<h2>Your personality type is:</h2>
+                               <img src="${resultImage}" alt="Your personality image" class="result-image" />`;
 }
