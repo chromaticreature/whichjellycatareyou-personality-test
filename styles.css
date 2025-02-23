@@ -116,38 +116,18 @@ background-color: #A9E4F1;
 }
 
     @media only screen and (max-width: 600px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-  }
-
-  /* Wrapper to center the container */
-  .wrapper {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f9f9f9;
-  }
-
-  .container {
-    width: 800px;    /* Original design width */
-    height: 600px;   /* Original design height */
-    margin: 0;       /* Remove extra margins */
-    transform: scale(calc(min(100vw / 800, 100vh / 600)));
-    transform-origin: top left;
-  }
-
-  /* Optional: Remove safe-area inset padding if needed */
-  body {
-    padding: 0;
-  }
-}
+    .container {
+    width: 95%;
+    max-width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    }
+    body {
+    min-height: auto;
+    }
 
 body {
 padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}     
+}
+      
 }
