@@ -216,6 +216,10 @@ function showResult() {
 
   // Hide the quiz container and display the result
   document.getElementById("quiz-page").style.display = "none";
+
+  // Show the results container (and thus the floating circle inside it)
+  document.getElementById("result").style.display = "block";
+  
   const resultContainer = document.getElementById("result");
   resultContainer.style.display = "block";
   resultContainer.innerHTML = `<h2>Feel Free to Share Jellycat Plushsona!</h2>
