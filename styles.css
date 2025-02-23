@@ -12,6 +12,17 @@ body {
   text-align: center;
 }
 
+.container {
+  width: auto;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  text-align: center;
+}
+
     h1 { /* Which Jellycat Are You? */
     color: #00C2DE;
     font-weight: 700;
