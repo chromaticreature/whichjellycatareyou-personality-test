@@ -45,21 +45,22 @@ body {
     margin: 10px 0; /* Optional: Add space around the paragraph */
     }
 
-    .quiz-image {
+   .quiz-image {
     width: auto;
     height: 300px;
     object-fit: cover;
     display: inline-block;
     margin: 20px auto;
-    }
+}
 
     @media (max-width: 600px) {
     .quiz-image {
-    width: 100%;
-    }
+        width: 100%;
+}
+}
 
     .result-image {
-    width: 800px;
+    width: 300px;
     height: auto;
     display: inline-block;
     margin: 20px auto;
