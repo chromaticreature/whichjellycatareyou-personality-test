@@ -116,18 +116,20 @@ background-color: #A9E4F1;
 }
 
     @media only screen and (max-width: 600px) {
-    .container {
-    width: 95%;
-    max-width: 95%;
-    padding: 10px;
-    margin: 0 auto;
-    }
-    body {
-    min-height: auto;
-    }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* ensures padding doesn't add extra width */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
 body {
 padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
-      
 }
