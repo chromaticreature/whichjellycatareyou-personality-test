@@ -123,10 +123,15 @@ background-color: #A9E4F1;
   
   .container {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     padding: 15px;
     margin: 0;
     box-sizing: border-box; /* ensures padding doesn't add extra width */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   body {
