@@ -1,4 +1,4 @@
-body {
+  body {
   font-family: "Mali", serif;
   font-weight: 200;
   background-color: #f9f9f9;
@@ -11,87 +11,86 @@ body {
   align-items: center;
   text-align: center;
   min-height: 100vh;
-}
+  }
 
-.container {
+  .container {
   width: auto;
   max-width: 800px;
   padding: 20px;
   margin: 20px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-  background-color: #FF8E00;
+  background-color: #f9f9f9;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;  /* Centers content horizontally */
-  align-items: center;      /* Centers content vertically */
-}
-
-h1 {
-  color: #00C2DE;
-  font-weight: 700;
-  font-size: 36px;
-}
-
-p {
-  color: #000000;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 0px;
-  margin: 10px 20px;
-}
-
-.quiz-credits {
-  font-family: sans-serif;
-  color: #333;
-  font-size: 10px;
-  font-weight: normal;
   text-align: center;
-  padding: 0 15px;
-}
+  }
 
-.quiz-image {
-  width: auto;
-  height: 300px;
-  object-fit: cover;
-  display: inline-block;
-  margin: 20px auto;
-}
+    h1 { /* Which Jellycat Are You? */
+    color: #00C2DE;
+    font-weight: 700;
+    font-size: 36px;
+    }
 
-.result-image {
-  width: 300px;
-  height: auto;
-  display: inline-block;
-  margin: 40px auto;
-}
+    p { 
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin: 10px 20px;
+    }
 
-.footer-wording {
-  color: #000000;
-  font-size: 10px;
-  font-weight: bold;
-}
+    .quiz-credits {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    padding: 0 15px
+    }
 
-footer {
-  margin-top: 10px; /* adjust value as needed */
-}
+   .quiz-image {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    display: inline-block;
+    margin: 20px auto;
+    }
+
+    .result-image {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 40px auto;
+    }
+
+    .footer-wording {
+    color: #000000;
+    font-size: 10px;
+    font-weight: bold;
+    }
+
+    footer {
+    margin-top: 10px; /* adjust value as needed */
+    }
 
 /* BUTTONS */
-.floating-circle {
+
+  .floating-circle {
   width: 150px;
   height: 150px;
-  background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Custom image */
+  background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Your custom image */
   background-size: cover;
   border-radius: 0%;
   position: fixed;
   top: 60%;                   /* Adjusts vertical position */
-  right: -100px;              /* Starts off-screen */
+  right: -100px;               /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideIn 8s linear forwards; /* Uses the keyframe to slide in */
+  animation: slideIn 8s linear forwards; /* Uses the correct keyframe and stops at the end */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-  z-index: 1000;             /* Ensures it appears above other content */
+  z-index: 1000;              /* Ensures it appears above other content */
 }
 
-@keyframes slideIn {
+  @keyframes slideIn {
   from {
     right: -100px;
   }
@@ -101,55 +100,33 @@ footer {
 }
 
 button {
-  font-family: "Sono", serif;
-  background-color: #00C2DE;
-  color: #000000;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 10px 0;
+font-family: "Sono", serif;
+background-color: #00C2DE;
+color: #000000;
+border: none;
+padding: 10px 20px;
+border-radius: 20px;
+cursor: pointer;
+font-size: 16px;
+margin: 10px 0;
 }
 
 button:hover {
-  background-color: #A9E4F1;
+background-color: #A9E4F1;
 }
 
-/* MEDIA QUERY: For mobile devices (screens 600px or less) */
-@media only screen and (max-width: 600px) {
-  /* Reset body layout on mobile */
-  body {
-    display: block;         /* Remove flex centering */
+    @media only screen and (max-width: 600px) {
+    .container {
+    width: 95%;
+    max-width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    }
+    body {
     min-height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-  }
-  
-  /* Use a wrapper to center the container */
-  .wrapper {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f9f9f9;
-  }
-  
-  /* Force the container to use the original design dimensions,
-     then scale it down uniformly to fit the viewport */
-  .container {
-    width: 800px;    /* Original design width */
-    height: 600px;   /* Original design height */
-    margin: 0;       /* Remove extra margins */
-    transform: scale(calc(min(100vw / 800, 100vh / 600)));
-    transform-origin: top left;
-  }
-  
-  /* Remove extra padding from body if any safe-area insets were added */
-  body {
-    padding: 0;
-  }
+    }
+
+body {
+padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}     
 }
