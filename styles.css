@@ -28,14 +28,14 @@ body {
     font-weight: 700;
     font-size: 36px;
     }
-    
+
     p { 
     color: #000000;
     font-size: 24px;
     font-weight: bold;
     margin-top: 0px;
     }
-    
+
     .quiz-credits {
     font-family: sans-serif;
     color: #333;
@@ -47,14 +47,9 @@ body {
 
     .quiz-image {
     width: auto;
-    height: object-fit: cover;
+    height: 300px;
     display: inline-block;
     margin: 20px auto;
-    }
-
-    @media (max-width: 600px) {
-    .quiz-image {
-    width: 100%;
     }
 
     .result-image {
@@ -63,7 +58,7 @@ body {
     display: inline-block;
     margin: 20px auto;
     }
-    
+
     .footer-wording {
     color: #000000;
     font-size: 10px;
