@@ -75,27 +75,27 @@
 /* BUTTONS */
 
   .floating-circle {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Your custom image */
   background-size: cover;
-  border-radius: 50%;
+  border-radius: 0%;
   position: fixed;
   top: 60%;                   /* Adjusts vertical position */
-  left: -100px;               /* Starts off-screen */
+  right: -100px;               /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideIn 10s linear forwards; /* Uses the correct keyframe and stops at the end */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 8s linear forwards; /* Uses the correct keyframe and stops at the end */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   z-index: 1000;              /* Ensures it appears above other content */
 }
 
   @keyframes slideIn {
   from {
-    left: -100px;
+    right: -100px;
   }
   to {
-    left: calc(50% - 40px); /* Ends at the center of the screen */
+    right: calc(50% - 40px); /* Ends at the center of the screen */
   }
 }
 
