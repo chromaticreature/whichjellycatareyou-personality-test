@@ -221,15 +221,17 @@ function showResult() {
   document.getElementById("result").style.display = "block";
   
   const resultContainer = document.getElementById("result");
-  resultContainer.style.display = "block";
-  resultContainer.innerHTML = `<h2>Feel Free to Share Jellycat Plushsona!</h2>
-                               <p>#Jellycatplushsona</p>
-                               <img src="${resultImage}" alt="Your personality image" class="result-image" />
-                               <div class="result-buttons">
-                                  <button id="share-btn">Share</button>
-                                  <button id="download-btn">Download</button>
-                                  <button id="restart-btn">Restart</button>
-                               </div>`;
+  resultContainer.innerHTML = `
+    <h2>Feel Free to Share Jellycat Plushsona!</h2>
+    <p>#Jellycatplushsona</p>
+    <img src="${resultImage}" alt="Your personality image" class="result-image" />
+    <div class="result-buttons">
+      <button id="share-btn">Share</button>
+      <button id="download-btn">Download</button>
+      <button id="restart-btn">Restart</button>
+    </div>
+    <div class="floating-circle" onclick="window.location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=xClkjH8We0e4y3fugnWNEazCzCeIPt5LqDdfLjXOsi9UMlFaNzdONExSRE5HOTNYT1NGTk83WllEMy4u';"></div>
+  `;
   
   // Add event listener for the Restart button
   document.getElementById("restart-btn").addEventListener("click", function() {
