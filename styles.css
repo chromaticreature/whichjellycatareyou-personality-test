@@ -1,4 +1,4 @@
-  body {
+body {
   font-family: "Mali", serif;
   font-weight: 200;
   background-color: #f9f9f9;
@@ -11,9 +11,9 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  }
+}
 
-  .container {
+.container {
   width: auto;
   max-width: 800px;
   padding: 20px;
@@ -22,77 +22,76 @@
   background-color: #FF8E00;
   border-radius: 20px;
   display: flex;
-  justify-content: center;  /* Centers horizontally */
-  align-items: center;
-  }
+  justify-content: center;  /* Centers content horizontally */
+  align-items: center;      /* Centers content vertically */
+}
 
-    h1 { /* Which Jellycat Are You? */
-    color: #00C2DE;
-    font-weight: 700;
-    font-size: 36px;
-    }
+h1 {
+  color: #00C2DE;
+  font-weight: 700;
+  font-size: 36px;
+}
 
-    p { 
-    color: #000000;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin: 10px 20px;
-    }
+p {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin: 10px 20px;
+}
 
-    .quiz-credits {
-    font-family: sans-serif;
-    color: #333;
-    font-size: 10px;
-    font-weight: normal;
-    text-align: center;
-    padding: 0 15px
-    }
+.quiz-credits {
+  font-family: sans-serif;
+  color: #333;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  padding: 0 15px;
+}
 
-   .quiz-image {
-    width: auto;
-    height: 300px;
-    object-fit: cover;
-    display: inline-block;
-    margin: 20px auto;
-    }
+.quiz-image {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 20px auto;
+}
 
-    .result-image {
-    width: 300px;
-    height: auto;
-    display: inline-block;
-    margin: 40px auto;
-    }
+.result-image {
+  width: 300px;
+  height: auto;
+  display: inline-block;
+  margin: 40px auto;
+}
 
-    .footer-wording {
-    color: #000000;
-    font-size: 10px;
-    font-weight: bold;
-    }
+.footer-wording {
+  color: #000000;
+  font-size: 10px;
+  font-weight: bold;
+}
 
-    footer {
-    margin-top: 10px; /* adjust value as needed */
-    }
+footer {
+  margin-top: 10px; /* adjust value as needed */
+}
 
 /* BUTTONS */
-
-  .floating-circle {
+.floating-circle {
   width: 150px;
   height: 150px;
-  background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Your custom image */
+  background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Custom image */
   background-size: cover;
   border-radius: 0%;
   position: fixed;
   top: 60%;                   /* Adjusts vertical position */
-  right: -100px;               /* Starts off-screen */
+  right: -100px;              /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideIn 8s linear forwards; /* Uses the correct keyframe and stops at the end */
+  animation: slideIn 8s linear forwards; /* Uses the keyframe to slide in */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-  z-index: 1000;              /* Ensures it appears above other content */
+  z-index: 1000;             /* Ensures it appears above other content */
 }
 
-  @keyframes slideIn {
+@keyframes slideIn {
   from {
     right: -100px;
   }
@@ -102,26 +101,29 @@
 }
 
 button {
-font-family: "Sono", serif;
-background-color: #00C2DE;
-color: #000000;
-border: none;
-padding: 10px 20px;
-border-radius: 20px;
-cursor: pointer;
-font-size: 16px;
-margin: 10px 0;
+  font-family: "Sono", serif;
+  background-color: #00C2DE;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 button:hover {
-background-color: #A9E4F1;
+  background-color: #A9E4F1;
 }
 
-    @media only screen and (max-width: 600px) {
-    display: block; /* override the flex layout */
-    min-height: auto; /* override min-height: 100vh */
-    padding: 0;      /* remove safe-area if desired */
+/* MEDIA QUERY: For mobile devices (screens 600px or less) */
+@media only screen and (max-width: 600px) {
+  /* Reset body layout on mobile */
+  body {
+    display: block;         /* Remove flex centering */
+    min-height: auto;
     margin: 0;
+    padding: 0;
     overflow: hidden;
     height: 100vh;
   }
@@ -136,15 +138,18 @@ background-color: #A9E4F1;
     background-color: #f9f9f9;
   }
   
+  /* Force the container to use the original design dimensions,
+     then scale it down uniformly to fit the viewport */
   .container {
-    width: 800px;    /* Design width */
-    height: 600px;   /* Design height */
+    width: 800px;    /* Original design width */
+    height: 600px;   /* Original design height */
+    margin: 0;       /* Remove extra margins */
     transform: scale(calc(min(100vw / 800, 100vh / 600)));
     transform-origin: top left;
   }
-
-body {
-padding: 0;
-}
-      
+  
+  /* Remove extra padding from body if any safe-area insets were added */
+  body {
+    padding: 0;
+  }
 }
