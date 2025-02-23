@@ -17,7 +17,6 @@
   width: auto;
   max-width: 800px;
   padding: 20px;
-  margin: 20px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
   background-color: #FF8E00;
   border-radius: 20px;
@@ -125,7 +124,6 @@ background-color: #A9E4F1;
     width: 100vw;
     height: 95vh;
     padding: 15px;
-    margin: 0;
     box-sizing: border-box; /* ensures padding doesn't add extra width */
 
     display: flex;
