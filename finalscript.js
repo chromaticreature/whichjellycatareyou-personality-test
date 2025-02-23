@@ -37,7 +37,7 @@ const questions = [
     question: "Q3/12: You get lost when a cute squirrel scurries into your path, its tiny eyes glimmering with curiosity. You...",
     image: "ImagesFolder/q3.png",
     answers: [
-      { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? Tad bit sus...", scores: { T: 1, F: 0 } },
+      { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? Thats a tad bit sus...", scores: { T: 1, F: 0 } },
       { type: "F", text: "Carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { T: 0, F: 1 } }
     ]
   },
