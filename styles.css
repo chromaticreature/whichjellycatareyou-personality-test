@@ -48,7 +48,7 @@ body {
     .quiz-image {
     width: auto;
     height: 300px;
-    height: object-fit: cover;
+    object-fit: cover;
     display: inline-block;
     margin: 20px auto;
     }
