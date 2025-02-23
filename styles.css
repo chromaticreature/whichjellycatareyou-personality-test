@@ -1,4 +1,4 @@
-body {
+  body {
   font-family: "Mali", serif;
   font-weight: 200;
   background-color: #f9f9f9;
@@ -10,9 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+  }
 
-.container {
+  .container {
   width: auto;
   max-width: 800px;
   padding: 20px;
@@ -21,7 +21,7 @@ body {
   background-color: #f9f9f9;
   border-radius: 20px;
   text-align: center;
-}
+  }
 
     h1 { /* Which Jellycat Are You? */
     color: #00C2DE;
@@ -42,7 +42,7 @@ body {
     font-size: 10px;
     font-weight: normal;
     text-align: center;
-    margin: 25px 40px; /* Optional: Add space around the paragraph */
+    margin: 25px 10px; /* Optional: Add space around the paragraph */
     }
 
    .quiz-image {
@@ -51,7 +51,7 @@ body {
     object-fit: cover;
     display: inline-block;
     margin: 20px auto;
-}
+    }
 
     .result-image {
     width: 300px;
@@ -69,6 +69,8 @@ body {
     footer {
     margin-top: 10px; /* adjust value as needed */
     }
+
+/* BUTTONS */
 
 button {
 font-family: "Sono", serif;
