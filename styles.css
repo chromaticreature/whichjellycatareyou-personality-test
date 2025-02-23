@@ -53,6 +53,11 @@ body {
     margin: 20px auto;
     }
 
+    @media (max-width: 600px) {
+    .quiz-image {
+    width: 100%;
+    }
+
     .result-image {
     width: 800px;
     height: auto;
