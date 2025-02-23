@@ -117,13 +117,13 @@ background-color: #A9E4F1;
 
    @media only screen and (max-width: 600px) {
   html {
-    /* Responsive font size that scales between 12px and 14px based on viewport width */
-    font-size: clamp(12px, 3vh, 14px);
+    /* Responsive font size that scales between 9px and 14px based on viewport width */
+    font-size: clamp(9px, 5vh, 14px);
   }
   
   .container {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     padding: 15px;
     margin: 0;
     box-sizing: border-box; /* ensures padding doesn't add extra width */
