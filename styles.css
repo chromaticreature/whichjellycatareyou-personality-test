@@ -129,7 +129,7 @@ background-color: #A9E4F1;
 
   .container {
     width: 100vw;
-    height: 95vh;       /* Adjust as needed, or 100vh if you want full viewport height */
+    height: 85vh;       /* Adjust as needed, or 100vh if you want full viewport height */
     padding: 15px;
     margin: 0;
     box-sizing: border-box;
