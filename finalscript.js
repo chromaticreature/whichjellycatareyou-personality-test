@@ -107,7 +107,7 @@ const questions = [
   },
   {
     question: "Q12/12: As you retrace your steps back home, the memory of the villagers lingers in your mind. A gentle question arises: Will you return to visit them again?",
-    image: "ImagesFolder/q12.gif.png",
+    image: "ImagesFolder/q12.gif",
     answers: [
       { type: "J", text: "You make a promise that on the next full moon, you will journey back to the village.", scores: { J: 1, P: 0 } },
       { type: "P", text: "You let fate decide your return, trusting that the winds of adventure will whisper in your ear.", scores: { J: 0, P: 1 } }
