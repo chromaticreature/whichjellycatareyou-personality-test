@@ -133,6 +133,11 @@ background-color: #A9E4F1;
     padding: 15px;
     margin: 0;
     box-sizing: border-box;
+
+     .quiz-image {
+    height: 200px; /* reduced height */
+    margin: 10px auto; /* optional: reduce margins */
+  }
     
     /* Flex layout to center the container's contents */
     display: flex;
