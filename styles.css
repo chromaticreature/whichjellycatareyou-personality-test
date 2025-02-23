@@ -77,19 +77,20 @@
   .floating-circle {
   width: 80px;
   height: 80px;
-  background-color: #00C2DE;
+  background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Your custom image */
+  background-size: cover;
   border-radius: 50%;
   position: fixed;
-  top: 80%;            /* Adjust this value to change the vertical position */
-  left: -100px;        /* Starts off-screen */
+  top: 60%;                   /* Adjusts vertical position */
+  left: -100px;               /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideIn 2s ease-out forwards;  /* Animation that moves the circle in */
+  animation: slideIn 10s linear forwards; /* Uses the correct keyframe and stops at the end */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;       /* Ensures it appears above other content */
+  z-index: 1000;              /* Ensures it appears above other content */
 }
 
-@keyframes slideIn {
+  @keyframes slideIn {
   from {
     left: -100px;
   }
