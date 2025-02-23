@@ -1,7 +1,7 @@
 body {
   font-family: "Mali", serif;
   font-weight: 200;
-  background-color: #FFFFFF;
+  background-color: #f9f9f9;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -9,17 +9,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.container {
-  width: auto;
-  max-width: 800px;
-  padding: 20px;
-  margin: 20px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  border-radius: 20px;
   text-align: center;
 }
 
