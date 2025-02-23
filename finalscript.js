@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: "Q10/12: At last, you’ve discovered the lost relic. With the treasure safely in hand, you now begin your journey back to the village.",
-    image: "ImagesFolder/q10.png",
+    image: "ImagesFolder/q10.gif",
     answers: [
       { type: "S", text: "The unmistakable scent of pine is a reminder that your friends in the village eagerly await your return.", scores: { S: 1, N: 0 } },
       { type: "N", text: "A soothing warmth radiates from the relic, as if it's saying that the villagers are missing you.", scores: { S: 0, N: 1 } }
@@ -99,7 +99,7 @@ const questions = [
   },
   {
     question: "Q11/12: With the relic safely returned, the village elder leans in and reveals a wondrous secret: The relic bestows upon you an extraordinary gift to transform into a Jellycat villager at will",
-    image: "ImagesFolder/q11.png",
+    image: "ImagesFolder/q11.gif",
     answers: [
       { type: "T", text: "That's incredible! You're already looking forward to experiment with this ability and have fun with your new friends.", scores: { T: 1, F: 0 } },
       { type: "F", text: "Your heart fills with delight at the thought of such playful magic and you imagine the joy it will bring", scores: { T: 0, F: 1 } }
@@ -107,7 +107,7 @@ const questions = [
   },
   {
     question: "Q12/12: As you retrace your steps back home, the memory of the villagers lingers in your mind. A gentle question arises: Will you return to visit them again?",
-    image: "ImagesFolder/q12.png",
+    image: "ImagesFolder/q12.gif.png",
     answers: [
       { type: "J", text: "You make a promise that on the next full moon, you will journey back to the village.", scores: { J: 1, P: 0 } },
       { type: "P", text: "You let fate decide your return, trusting that the winds of adventure will whisper in your ear.", scores: { J: 0, P: 1 } }
