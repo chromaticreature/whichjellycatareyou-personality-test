@@ -16,7 +16,7 @@ body {
 .container {
   width: 70vw;
   max-width: 800px;
-  padding: 50px;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
   background-color: #FF8E00;
   border-radius: 20px;
@@ -104,7 +104,6 @@ button:hover {
   border-radius: 0%;
   position: fixed;
   top: 60%;                   /* Adjusts vertical position */
-  top: 90%;                   /* Adjusts vertical position */
   right: -100px;              /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
