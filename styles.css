@@ -61,7 +61,7 @@ p {
 }
 
 .result-image {
-  width: 300px;
+  width: 50vw;
   height: auto;
   display: inline-block;
   margin: 40px auto;
@@ -119,7 +119,7 @@ button:hover {
     right: calc(50% - 40px);  /* Center of the screen */
   }
   100% {
-    right: -100px;           /* Exit off-screen again */
+    left: -100px;           /* Exit off-screen again */
   }
 }
 
