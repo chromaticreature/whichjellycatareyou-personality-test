@@ -106,17 +106,20 @@ button:hover {
   right: -100px;              /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideIn 20s linear forwards; /* Uses the keyframe animation */
+  animation: slideInOut 20s linear infinite; /* Uses the keyframe animation */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   z-index: 1000;              /* Ensures it appears above other content */
 }
 
-@keyframes slideIn {
-  from {
-    right: -100px;
+@keyframes slideInOut {
+  0% {
+    right: -100px;           /* Start off-screen */
   }
-  to {
-    right: calc(50% - 40px); /* Ends at the center of the screen */
+  50% {
+    right: calc(50% - 40px);  /* Center of the screen */
+  }
+  100% {
+    right: -100px;           /* Exit off-screen again */
   }
 }
 
@@ -150,7 +153,7 @@ button:hover {
   }
 
   .quiz-image {
-    height: 50vh; /* reduced height for mobile */
+    height: 200px; /* reduced height for mobile */
     margin: 10px auto;
   }
 
