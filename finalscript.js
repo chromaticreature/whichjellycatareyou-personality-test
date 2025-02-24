@@ -223,7 +223,7 @@ function showResult() {
   const resultContainer = document.getElementById("result");
   resultContainer.innerHTML = `
     <p>#Jellycatplushsona</p>
-    <p>You are a ${personalityType}</p>
+    <p>You are an ${personalityType}!</p>
     <img src="${resultImage}" alt="Your personality image" class="result-image" />
     <div class="result-buttons">
       <button id="share-btn">Share</button>
