@@ -18,7 +18,7 @@ width: 70vw;
 max-width: 800px;
 padding: 50px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-background-color: #FF8E00;
+background-color: #f9f9f9;
 border-radius: 20px;
 text-align: center;
 
@@ -138,7 +138,7 @@ display: block;
 .container {
 width: 100vw;
 height: 85vh;       /* Adjust as needed, or 100vh for full viewport height */
-padding: 15px;
+padding: 30px;
 margin: 0;
 box-sizing: border-box;
 
