@@ -212,7 +212,6 @@ function showResult() {
   // Play the result sound
   playResultSound();
   
-function showResult() {
   // Calculate the final personality type by comparing the paired scores
   let personalityType = "";
   personalityType += scores.E >= scores.I ? "E" : "I";
@@ -225,8 +224,6 @@ function showResult() {
 
   // Hide the quiz container and display the result
   document.getElementById("quiz-page").style.display = "none";
-
-  // Show the results container (and thus the floating circle inside it)
   document.getElementById("result").style.display = "block";
   
   const resultContainer = document.getElementById("result");
@@ -246,7 +243,6 @@ function showResult() {
   document.getElementById("restart-btn").addEventListener("click", function() {
     currentQuestionIndex = 0;
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-
     resultContainer.style.display = "none";
     document.getElementById("start").style.display = "block";
   });
@@ -265,7 +261,7 @@ function showResult() {
       alert('Sharing is not supported in your browser. Copy the link: ' + window.location.href);
     }
   });
-
+  
   // Add event listener for the Download button
   document.getElementById("download-btn").addEventListener("click", function() {
     const link = document.createElement('a');
@@ -276,10 +272,3 @@ function showResult() {
     document.body.removeChild(link);
   });
 }
-
-// Prevent right-click on images with class 'quiz-image' or 'result-image'
-document.addEventListener('contextmenu', function(e) {
-  if (e.target.matches('.quiz-image, .result-image')) {
-    e.preventDefault();
-  }
-});
