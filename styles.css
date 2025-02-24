@@ -103,11 +103,11 @@ background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Y
 background-size: cover;
 border-radius: 0%;
 position: fixed;
-top: 60%;                   /* Adjusts vertical position */
+top: 20%;                   /* Adjusts vertical position */
 right: -100px;              /* Starts off-screen */
 transform: translateY(-50%);
 cursor: pointer;
-animation: slideIn 8s linear forwards; /* Uses the keyframe animation */
+animation: slideIn 20s linear forwards; /* Uses the keyframe animation */
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 z-index: 1000;              /* Ensures it appears above other content */
 }
@@ -117,7 +117,7 @@ from {
 right: -100px;
 }
 to {
-right: calc(50% - 40px); /* Ends at the center of the screen */
+left: -100px; /* Ends at the center of the screen */
 }
 }
 
