@@ -138,7 +138,7 @@ display: block;
 
 .container {
 width: 100vw;
-height: 85vh;       /* Adjust as needed, or 100vh for full viewport height */
+height: 100vh;       /* Adjust as needed, or 100vh for full viewport height */
 padding: 15px;
 margin: 0;
 box-sizing: border-box;
