@@ -40,7 +40,8 @@ p {
   color: #000000;
   font-size: 24px;
   font-weight: bold;
-  margin: 0px 0px;
+  margin-top: 0px;
+  margin: 10px 20px;
 }
 
 .quiz-credits {
@@ -61,7 +62,7 @@ p {
 }
 
 .result-image {
-  width: 50vw;
+  width: 300px;
   height: auto;
   display: inline-block;
   margin: 40px auto;
@@ -102,24 +103,22 @@ button:hover {
   background-size: cover;
   border-radius: 0%;
   position: fixed;
-  top: 20%;                   /* Adjusts vertical position */
+  top: 60%;                   /* Adjusts vertical position */
+  top: 90%;                   /* Adjusts vertical position */
   right: -100px;              /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
-  animation: slideInOut 20s linear infinite; /* Uses the keyframe animation */
+  animation: slideIn 8s linear forwards; /* Uses the keyframe animation */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   z-index: 1000;              /* Ensures it appears above other content */
 }
 
-@keyframes slideInOut {
-  0% {
-    right: -100px;           /* Start off-screen */
+@keyframes slideIn {
+  from {
+    right: -100px;
   }
-  50% {
-    right: calc(50% - 40px);  /* Center of the screen */
-  }
-  100% {
-    left: -100px;           /* Exit off-screen again */
+  to {
+    right: calc(50% - 40px); /* Ends at the center of the screen */
   }
 }
 
