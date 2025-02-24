@@ -103,7 +103,7 @@ button:hover {
   background-size: cover;
   border-radius: 0%;
   position: fixed;
-  top: 60%;                   /* Adjusts vertical position */
+  top: 90%;                   /* Adjusts vertical position */
   right: -100px;              /* Starts off-screen */
   transform: translateY(-50%);
   cursor: pointer;
