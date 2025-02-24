@@ -142,6 +142,7 @@ height: 85vh;       /* Adjust as needed, or 100vh for full viewport height */
 padding: 15px;
 margin: 0;
 box-sizing: border-box;
+overflow: hidden;
 
 /* Flex layout to center the container's contents */
 display: flex;
