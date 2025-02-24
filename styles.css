@@ -97,28 +97,28 @@ background-color: #A9E4F1;
 
 /* Floating Circle */
 .floating-circle {
-width: 150px;
-height: 150px;
-background: url('ImagesFolder/floatingcircle.png') no-repeat center center; /* Your custom image */
-background-size: cover;
-border-radius: 0%;
-position: fixed;
-top: 20%;                   /* Adjusts vertical position */
-right: -100px;              /* Starts off-screen */
-transform: translateY(-50%);
-cursor: pointer;
-animation: slideIn 20s linear forwards; /* Uses the keyframe animation */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-z-index: 1000;              /* Ensures it appears above other content */
+  width: 150px;
+  height: 150px;
+  background: url('ImagesFolder/floatingcircle.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 0%;  /* Change to 50% if you want a circular shape */
+  position: fixed;
+  top: 20%;          /* Adjusts vertical position */
+  left: 100vw;       /* Start fully off-screen to the right */
+  transform: translateY(-50%);
+  cursor: pointer;
+  animation: slideAcross 20s linear infinite; /* Repeats indefinitely */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  z-index: 1000;     /* Ensures it appears above other content */
 }
 
-@keyframes slideIn {
-from {
-right: -100px;
-}
-to {
-left: -100px; /* Ends at the center of the screen */
-}
+@keyframes slideAcross {
+  0% {
+    left: 100vw;    /* Start off-screen right */
+  }
+  100% {
+    left: -150px;   /* End off-screen left */
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE DEVICES */
