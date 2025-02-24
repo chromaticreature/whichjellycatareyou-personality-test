@@ -35,7 +35,7 @@ const questions = [
   },
   {
     question: "Q3/12: You get lost when a cute squirrel scurries into your path, its tiny eyes glimmering with curiosity. You...",
-    image: "ImagesFolder/q3.png",
+    image: "ImagesFolder/q3.gif",
     answers: [
       { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? Thats a tad bit sus...", scores: { T: 1, F: 0 } },
       { type: "F", text: "Carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { T: 0, F: 1 } }
@@ -43,7 +43,7 @@ const questions = [
   },
   {
     question: "Q4/12: After following the helpful squirrel, you suddenly find yourself before a mysterious, glowing portal. You...",
-    image: "ImagesFolder/q4.png",
+    image: "ImagesFolder/q4.gif",
     answers: [
       { type: "J", text: "Take a moment to survey the portal. *What's on the other side? What if there's something dangerous?*", scores: { J: 1, P: 0 } },
       { type: "P", text: "Leap through the portal, excited to see what's in store. *Hopefully the magical creatures are there!*", scores: { J: 0, P: 1 } }
@@ -185,22 +185,22 @@ function showQuestion() {
 }
 
 const personalityImages = {
-  "ESTJ": "ImagesFolder/placeholderart.png",
-  "ENTJ": "ImagesFolder/placeholderart.png",
-  "ENFP": "ImagesFolder/placeholderart.png",
-  "INFJ": "ImagesFolder/placeholderart.png",
-  "INTP": "ImagesFolder/placeholderart.png",
-  "INTJ": "ImagesFolder/placeholderart.png",
-  "INFP": "ImagesFolder/placeholderart.png",
-  "ENTP": "ImagesFolder/placeholderart.png",
-  "ENFJ": "ImagesFolder/placeholderart.png",
-  "ESFP": "ImagesFolder/placeholderart.png",
-  "ESTP": "ImagesFolder/placeholderart.png",
-  "ESFJ": "ImagesFolder/placeholderart.png",
-  "ISFJ": "ImagesFolder/placeholderart.png",
-  "ISFP": "ImagesFolder/placeholderart.png",
-  "ISTJ": "ImagesFolder/placeholderart.png",
-  "ISTP": "ImagesFolder/placeholderart.png",
+  "ESTJ": "ImagesFolder/mbtiplaceholder.png",
+  "ENTJ": "ImagesFolder/mbtiplaceholder.png",
+  "ENFP": "ImagesFolder/mbtiplaceholder.png",
+  "INFJ": "ImagesFolder/mbtiplaceholder.png",
+  "INTP": "ImagesFolder/mbtiplaceholder.png",
+  "INTJ": "ImagesFolder/mbtiplaceholder.png",
+  "INFP": "ImagesFolder/mbtiplaceholder.png",
+  "ENTP": "ImagesFolder/mbtiplaceholder.png",
+  "ENFJ": "ImagesFolder/mbtiplaceholder.png",
+  "ESFP": "ImagesFolder/mbtiplaceholder.png",
+  "ESTP": "ImagesFolder/mbtiplaceholder.png",
+  "ESFJ": "ImagesFolder/mbtiplaceholder.png",
+  "ISFJ": "ImagesFolder/mbtiplaceholder.png",
+  "ISFP": "ImagesFolder/mbtiplaceholder.png",
+  "ISTJ": "ImagesFolder/mbtiplaceholder.png",
+  "ISTP": "ImagesFolder/mbtiplaceholder.png",
 };
 
 function showResult() {
@@ -224,6 +224,7 @@ function showResult() {
   resultContainer.innerHTML = `
     <h2>Feel Free to Share Jellycat Plushsona!</h2>
     <p>#Jellycatplushsona</p>
+    <p>You are a ${personalityType}</p>
     <img src="${resultImage}" alt="Your personality image" class="result-image" />
     <div class="result-buttons">
       <button id="share-btn">Share</button>
