@@ -270,4 +270,14 @@ function showResult() {
     link.click();
     document.body.removeChild(link);
   });
+
+  // Prevent right-click on quiz image
+document.addEventListener('DOMContentLoaded', () => {
+  const quizImageElement = document.querySelector('.quiz-image');
+  if (quizImageElement) {
+    quizImageElement.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+  }
+});
 }
