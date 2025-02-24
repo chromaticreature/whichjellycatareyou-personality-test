@@ -80,6 +80,12 @@ margin-top: 10px; /* adjust value as needed */
 
 /* BUTTONS */
 
+.floating-circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .floating-circle-text {
   margin-top: 8px;  /* Adjust spacing as needed */
   font-size: 14px;  /* Or any size that fits your design */
