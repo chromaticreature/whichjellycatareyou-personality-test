@@ -37,7 +37,7 @@ const questions = [
     question: "Q3/12: You get lost when a cute squirrel scurries into your path, its tiny eyes glimmering with curiosity. You...",
     image: "ImagesFolder/q3.gif",
     answers: [
-      { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? Thats a tad bit sus...", scores: { T: 1, F: 0 } },
+      { type: "T", text: "Assess the situation. A squirrel showing up when you're lost? That's a tad bit sus...", scores: { T: 1, F: 0 } },
       { type: "F", text: "Carefully offer a nut, hoping the little creature knows the way better than you do.", scores: { T: 0, F: 1 } }
     ]
   },
@@ -235,11 +235,9 @@ function showResult() {
   
   // Add event listener for the Restart button
   document.getElementById("restart-btn").addEventListener("click", function() {
-    // Optionally, reset scores and the question index if restarting
     currentQuestionIndex = 0;
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 
-    // Hide the result container and show the landing page container
     resultContainer.style.display = "none";
     document.getElementById("start").style.display = "block";
   });
@@ -255,14 +253,12 @@ function showResult() {
       .then(() => console.log('Shared successfully'))
       .catch((error) => console.log('Error sharing:', error));
     } else {
-      // Fallback for browsers that don't support the Web Share API
       alert('Sharing is not supported in your browser. Copy the link: ' + window.location.href);
     }
   });
 
   // Add event listener for the Download button
   document.getElementById("download-btn").addEventListener("click", function() {
-    // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = resultImage;            
     link.download = 'YourJellycatPlushsona_byChromaticreature.png';
@@ -270,14 +266,11 @@ function showResult() {
     link.click();
     document.body.removeChild(link);
   });
+}
 
-  // Prevent right-click on quiz image
-document.addEventListener('DOMContentLoaded', () => {
-  const quizImageElement = document.querySelector('.quiz-image');
-  if (quizImageElement) {
-    quizImageElement.addEventListener('contextmenu', event => {
-      event.preventDefault();
-    });
+// Prevent right-click on images with class 'quiz-image' or 'result-image'
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.matches('.quiz-image, .result-image')) {
+    e.preventDefault();
   }
 });
-}
