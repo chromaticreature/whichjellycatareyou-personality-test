@@ -80,18 +80,6 @@ margin-top: 10px; /* adjust value as needed */
 
 /* BUTTONS */
 
-.floating-circle-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.floating-circle-text {
-  margin-top: 8px;  /* Adjust spacing as needed */
-  font-size: 14px;  /* Or any size that fits your design */
-  color: #000;      /* Adjust color as needed */
-}
-
 button {
 font-family: "Sono", serif;
 background-color: #00C2DE;
@@ -109,28 +97,41 @@ background-color: #A9E4F1;
 }
 
 /* Floating Circle */
+
+.floating-circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 20%;  /* Or adjust as needed */
+  left: 100vw; /* Start off-screen right */
+  transform: translateY(-50%);
+  cursor: pointer;
+  animation: slideAcross 20s linear infinite;
+  z-index: 1000;
+}
+
 .floating-circle {
   width: 150px;
   height: 150px;
   background: url('ImagesFolder/floatingcircle.png') no-repeat center center;
   background-size: cover;
   border-radius: 0%;  /* Change to 50% if you want a circular shape */
-  position: fixed;
-  top: 20%;          /* Adjusts vertical position */
-  left: 100vw;       /* Start fully off-screen to the right */
-  transform: translateY(-50%);
-  cursor: pointer;
-  animation: slideAcross 20s linear infinite; /* Repeats indefinitely */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-  z-index: 1000;     /* Ensures it appears above other content */
+  /* Remove fixed positioning here so it moves with the container */
+}
+
+.floating-circle-text {
+  margin-top: 8px;
+  font-size: 25px;
+  color: #333;
 }
 
 @keyframes slideAcross {
   0% {
-    left: 100vw;    /* Start off-screen right */
+    left: 100vw;  /* Start off-screen right */
   }
   100% {
-    left: -150px;   /* End off-screen left */
+    left: -150px; /* End off-screen left */
   }
 }
 
