@@ -79,6 +79,13 @@ margin-top: 10px; /* adjust value as needed */
 }
 
 /* BUTTONS */
+
+.floating-circle-text {
+  margin-top: 8px;  /* Adjust spacing as needed */
+  font-size: 14px;  /* Or any size that fits your design */
+  color: #000;      /* Adjust color as needed */
+}
+
 button {
 font-family: "Sono", serif;
 background-color: #00C2DE;
