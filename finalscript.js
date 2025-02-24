@@ -16,6 +16,11 @@ function playSound() {
   sound.play();
 }
 
+function playResultSound() {
+  const resultSound = new Audio("Audio/sparkle.mp3"); // replace with your new sound file path
+  resultSound.play();
+}
+
 const questions = [
   {
     question: "Q1/12: You approach Juniper Grove, where you have heard magical creatures live. Curious, you...",
@@ -203,6 +208,10 @@ const personalityImages = {
   "ISTP": "ImagesFolder/mbtiplaceholder.png",
 };
 
+function showResult() {
+  // Play the result sound
+  playResultSound();
+  
 function showResult() {
   // Calculate the final personality type by comparing the paired scores
   let personalityType = "";
