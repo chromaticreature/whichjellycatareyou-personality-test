@@ -56,7 +56,7 @@ const questions = [
   },
   {
     question: "Q5/12: Stepping through the magical portal, you find yourself in a quaint village filled with adorable little creatures. You...",
-    image: "ImagesFolder/q5.png",
+    image: "ImagesFolder/q5.gif",
     answers: [
       { type: "E", text: "Enthusiastically mingle with the villagers, excited to join in their festivities.", scores: { E: 1, I: 0 } },
       { type: "I", text: "Quietly absorb the village’s charm, preferring to observe before joining them.", scores: { E: 0, I: 1 } }
