@@ -103,7 +103,7 @@ const questions = [
     ]
   },
   {
-    question: "Q11/12: The chief reveals that the relic has the power to transform you into a Jellycat villager at will.",
+    question: "Q11/12: The chief reveals that the relic has the power to transform you into a villager at will.",
     image: "ImagesFolder/q11.gif",
     answers: [
       { type: "T", text: "That's incredible! You're excited to try out its power and have fun with your new friends.", scores: { T: 1, F: 0 } },
@@ -228,7 +228,7 @@ function showResult() {
   
   const resultContainer = document.getElementById("result");
   resultContainer.innerHTML = `
-    <p>#Jellycatplushsona</p>
+    <p>#myplushsona</p>
     <p>Welcome to Juniper Grove!</p>
     <img src="${resultImage}" alt="Your personality image" class="result-image" />
     <div class="result-buttons">
@@ -251,8 +251,8 @@ function showResult() {
   document.getElementById("share-btn").addEventListener("click", function() {
     if (navigator.share) {
       navigator.share({
-        title: 'Check out my Jellycat Plushsona!',
-        text: `Find out your Jellycat Plushsona here! `,
+        title: 'Check out my Plushsona!',
+        text: `Find out your Plushsona here! `,
         url: window.location.href,
       })
       .then(() => console.log('Shared successfully'))
@@ -266,7 +266,7 @@ function showResult() {
   document.getElementById("download-btn").addEventListener("click", function() {
     const link = document.createElement('a');
     link.href = resultImage;            
-    link.download = 'YourJellycatPlushsona_byChromaticreature.png';
+    link.download = 'YourPlushsona_byChromaticreature.png';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
