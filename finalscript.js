@@ -252,7 +252,7 @@ function showResult() {
     if (navigator.share) {
       navigator.share({
         title: 'Check out my Jellycat Plushsona!',
-        text: `Find out yours!`,
+        text: `Find out your Jellycat Plushsona here! `,
         url: window.location.href,
       })
       .then(() => console.log('Shared successfully'))
