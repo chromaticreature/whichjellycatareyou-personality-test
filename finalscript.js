@@ -190,22 +190,22 @@ function showQuestion() {
 }
 
 const personalityImages = {
-  "ESTJ": "ImagesFolder/mbti_placeholder.png",
-  "ENTJ": "ImagesFolder/mbti_placeholder.png",
-  "ENFP": "ImagesFolder/mbti_placeholder.png",
-  "INFJ": "ImagesFolder/mbti_placeholder.png",
-  "INTP": "ImagesFolder/mbti_placeholder.png",
-  "INTJ": "ImagesFolder/mbti_placeholder.png",
-  "INFP": "ImagesFolder/mbti_placeholder.png",
-  "ENTP": "ImagesFolder/mbti_placeholder.png",
-  "ENFJ": "ImagesFolder/mbti_placeholder.png",
-  "ESFP": "ImagesFolder/mbti_placeholder.png",
-  "ESTP": "ImagesFolder/mbti_placeholder.png",
-  "ESFJ": "ImagesFolder/mbti_placeholder.png",
-  "ISFJ": "ImagesFolder/mbti_placeholder.png",
-  "ISFP": "ImagesFolder/mbti_placeholder.png",
-  "ISTJ": "ImagesFolder/mbti_placeholder.png",
-  "ISTP": "ImagesFolder/mbti_placeholder.png",
+  "ESTJ": "ImagesFolder/mbti_estj.png",
+  "ENTJ": "ImagesFolder/mbti_entj.png",
+  "ENFP": "ImagesFolder/mbti_enfp.png",
+  "INFJ": "ImagesFolder/mbti_infj.png",
+  "INTP": "ImagesFolder/mbti_intp.png",
+  "INTJ": "ImagesFolder/mbti_intj.png",
+  "INFP": "ImagesFolder/mbti_infp.png",
+  "ENTP": "ImagesFolder/mbti_entp.png",
+  "ENFJ": "ImagesFolder/mbti_enfj.png",
+  "ESFP": "ImagesFolder/mbti_esfp.png",
+  "ESTP": "ImagesFolder/mbti_estp.png",
+  "ESFJ": "ImagesFolder/mbti_esfj.png",
+  "ISFJ": "ImagesFolder/mbti_isfj.png",
+  "ISFP": "ImagesFolder/mbti_isfp.png",
+  "ISTJ": "ImagesFolder/mbti_istj.png",
+  "ISTP": "ImagesFolder/mbti_istp.png",
 };
 
 function showResult() {
