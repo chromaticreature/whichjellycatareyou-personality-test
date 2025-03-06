@@ -45,7 +45,15 @@ margin: 10px 20px;
 }
 
 .results-page {
-background-color: #ffcccb;
+    background-color: #ffcccb; /* Light pink */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Ensures it covers the full screen */
+    top: 0;
+    left: 0;
+    display: flex; /* Optional: Center content */
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz-credits {
