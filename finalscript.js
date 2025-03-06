@@ -224,7 +224,9 @@ function showResult() {
 
   // Hide the quiz container and display the result
   document.getElementById("quiz-page").style.display = "none";
-  document.getElementById("result").style.display = "block";
+  //document.getElementById("result").style.display = "block";
+  document.getElementById("result").style.display = "flex"; // Make it a flex container
+  document.body.classList.add("results-page");
   
   const resultContainer = document.getElementById("result");
   resultContainer.innerHTML = `
