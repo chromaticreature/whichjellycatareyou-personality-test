@@ -15,7 +15,7 @@ overflow: hidden;
 }
 
 .results-page {
-background-color: #ffcccb; /* Light pink */
+background: url('ImagesFolder/bgplaceholder.png') no-repeat center center;
 width: 100vw; /* Full viewport width */
 height: 100vh; /* Full viewport height */
 position: fixed; /* Ensures it covers the full screen */
