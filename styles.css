@@ -73,6 +73,8 @@ width: 50vh;
 height: auto;
 display: inline-block;
 margin: 40px auto;
+align-items: center;
+text-align: center;
 }
 
 .footer-wording {
