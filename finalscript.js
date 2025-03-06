@@ -240,6 +240,10 @@ function showResult() {
     </div>
     <div class="floating-circle" onclick="window.location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=xClkjH8We0e4y3fugnWNEazCzCeIPt5LqDdfLjXOsi9UMlFaNzdONExSRE5HOTNYT1NGTk83WllEMy4u';"></div>
   `;
+
+// Add CSS classes to the paragraphs
+document.getElementById("plushsona").classList.add("plushsona");
+document.getElementById("welcome").classList.add("welcome-text");
   
   // Add event listener for the Restart button
   document.getElementById("restart-btn").addEventListener("click", function() {
