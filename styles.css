@@ -44,6 +44,10 @@ margin-top: 0px;
 margin: 10px 20px;
 }
 
+.results-page {
+background-color: #ffcccb;
+}
+
 .quiz-credits {
 font-family: sans-serif;
 color: #333;
