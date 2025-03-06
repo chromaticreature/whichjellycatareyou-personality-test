@@ -13,6 +13,13 @@ text-align: center;
 min-height: 100vh;
 }
 
+.results-page {
+background-color: #ffcccb; /* Light pink */
+width: 100vw; /* Full viewport width */
+height: 100vh; /* Full viewport height */
+position: fixed; /* Ensures it covers the full screen */
+}
+
 .container {
 width: 70vw;
 max-width: 800px;
@@ -42,22 +49,6 @@ font-size: 24px;
 font-weight: bold;
 margin-top: 0px;
 margin: 10px 20px;
-}
-
-.results-page {
-background-color: #ffcccb; /* Light pink */
-width: 100vw; /* Full viewport width */
-height: 100vh; /* Full viewport height */
-position: fixed; /* Ensures it covers the full screen */
-}
-
-#result {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-min-height: 100vh; /* Ensures full viewport height */
 }
 
 .quiz-credits {
