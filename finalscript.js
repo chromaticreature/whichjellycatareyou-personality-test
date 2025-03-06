@@ -230,8 +230,8 @@ function showResult() {
   
   const resultContainer = document.getElementById("result");
   resultContainer.innerHTML = `
-    <p>#myplushsona</p>
-    <p>Welcome to Juniper Grove!</p>
+  <p id="plushsona">#myplushsona</p>
+  <p id="welcome">Welcome to Juniper Grove!</p>
     <img src="${resultImage}" alt="Your personality image" class="result-image" />
     <div class="result-buttons">
       <button id="share-btn">Share</button>
