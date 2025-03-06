@@ -251,6 +251,7 @@ document.getElementById("welcome").classList.add("welcome-text");
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
     resultContainer.style.display = "none";
     document.getElementById("start").style.display = "block";
+    document.body.style.background = "#f9f9f9";
   });
   
   // Add event listener for the Share button
