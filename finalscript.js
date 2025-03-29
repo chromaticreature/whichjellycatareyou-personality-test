@@ -252,18 +252,6 @@ document.getElementById("welcome").classList.add("welcome-text");
     resultContainer.style.display = "none";
     document.getElementById("start").style.display = "block";
   });
-
-  // Hide resultContainer properly
-  resultContainer.style.display = "none";
-
-  // Restore original landing page background
-  document.body.style.background = "#f9f9f9"; // Change to your original background
-  document.body.style.backgroundImage = "none"; // Remove any new background image
-
-  // Reset container positions to avoid shifting
-  document.getElementById("start").style.display = "flex"; 
-  document.getElementById("start").style.opacity = 1;
-  document.getElementById("start").style.visibility = "visible";
   
   // Add event listener for the Share button
   document.getElementById("share-btn").addEventListener("click", function() {
@@ -289,4 +277,11 @@ document.getElementById("welcome").classList.add("welcome-text");
     link.click();
     document.body.removeChild(link);
   });
+
+  // Hide resultContainer properly
+  resultContainer.style.display = "none";
+
+  // Restore original landing page background
+  document.body.style.background = "#f9f9f9"; // Change to your original background
+  document.body.style.backgroundImage = "none"; // Remove any new background image
 }
