@@ -224,14 +224,12 @@ function showResult() {
 
   // Hide the quiz container and display the result
   document.getElementById("quiz-page").style.display = "none";
-  //document.getElementById("result").style.display = "block";
-  document.getElementById("result").style.display = "flex"; // Make it a flex container
-  document.body.classList.add("results-page");
+  document.getElementById("result").style.display = "block";
   
   const resultContainer = document.getElementById("result");
   resultContainer.innerHTML = `
-  <p id="plushsona">#myplushsona</p>
-  <p id="welcome">Welcome to Juniper Grove!</p>
+    <p>#myplushsona</p>
+    <p>Welcome to Juniper Grove!</p>
     <img src="${resultImage}" alt="Your personality image" class="result-image" />
     <div class="result-buttons">
       <button id="share-btn">Share</button>
@@ -240,10 +238,6 @@ function showResult() {
     </div>
     <div class="floating-circle" onclick="window.location.href='https://forms.office.com/Pages/ResponsePage.aspx?id=xClkjH8We0e4y3fugnWNEazCzCeIPt5LqDdfLjXOsi9UMlFaNzdONExSRE5HOTNYT1NGTk83WllEMy4u';"></div>
   `;
-
-// Add CSS classes to the paragraphs
-document.getElementById("plushsona").classList.add("plushsona");
-document.getElementById("welcome").classList.add("welcome-text");
   
   // Add event listener for the Restart button
   document.getElementById("restart-btn").addEventListener("click", function() {
@@ -277,11 +271,4 @@ document.getElementById("welcome").classList.add("welcome-text");
     link.click();
     document.body.removeChild(link);
   });
-
-  // Hide resultContainer properly
-  resultContainer.style.display = "none";
-
-  // Restore original landing page background
-  document.body.style.background = "#f9f9f9"; // Change to your original background
-  document.body.style.backgroundImage = "none"; // Remove any new background image
 }
