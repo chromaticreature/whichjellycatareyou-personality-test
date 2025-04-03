@@ -227,6 +227,10 @@ function showResult() {
   document.getElementById("result").style.display = "block";
   
   const resultContainer = document.getElementById("result");
+  resultContainer.style.display = "flex"; // Ensures flexbox is applied
+  resultContainer.style.justifyContent = "center"; // Centers vertically
+  resultContainer.style.alignItems = "center"; // Centers horizontally
+  resultContainer.style.height = "100vh"; // Ensures full screen height
   resultContainer.innerHTML = `
     <p>#myplushsona</p>
     <p>Welcome to Juniper Grove!</p>
